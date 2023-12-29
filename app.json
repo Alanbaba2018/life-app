@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "c2110aff-d311-47da-ba13-919fa99f1188"
+      }
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "cover"
+    },
+    "icon": "./assets/icon.png",
+    "android": {
+      "package": "com.qianqian.life"
+    },
+    "ios": {
+      "bundleIdentifier": "com.qianqian.life"
+    }
+  }
+}
