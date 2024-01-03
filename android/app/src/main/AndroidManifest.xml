@@ -1,4 +1,4 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.qianqian.life">
   <uses-permission android:name="android.permission.INTERNET"/>
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
   <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
@@ -10,6 +10,9 @@
       <category android:name="android.intent.category.BROWSABLE"/>
       <data android:scheme="https"/>
     </intent>
+  </queries>
+  <queries>
+    <package android:name="com.tencent.mm"/>
   </queries>
   <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:allowBackup="true" android:theme="@style/AppTheme">
     <meta-data android:name="expo.modules.updates.ENABLED" android:value="false"/>
@@ -29,13 +32,6 @@
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
-    <activity android:name=".wxapi.WXEntryActivity" android:label="@string/app_name" android:exported="true"/>
+    <activity android:name=".wxapi.WXEntryActivity" android:label="@string/app_name" android:exported="true" android:taskAffinity="com.qianqian.life" android:launchMode="singleTask"/>
   </application>
-  <queries>
-    <!--
-      微信 Android 11-更新 openSDK 适配
-      参见 https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Access_Guide/Android.html#jump2
-    -->
-    <package android:name="com.tencent.mm" />
-  </queries>
 </manifest>
